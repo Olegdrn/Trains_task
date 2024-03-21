@@ -1,0 +1,33 @@
+$grey_color: #636363;
+$grey_backg: #F7F7F7;
+$grey_element_backg: rgb(194, 194, 194);
+
+.train_Data{
+text-align: start;
+width: 55%;
+display: flex;
+flex-direction: column;
+background-color: white;
+padding: 1%;
+}
+.trains{
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+h4{
+  margin: 7px 0;
+}
+
+.characteristic{
+  border-bottom: 1px $grey_element_backg solid;
+}
+
+input{
+  width: 50%;
+  border: none;
+  padding: 3px 5px ;
+  text-align: center;
+}

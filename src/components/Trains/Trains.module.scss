@@ -1,0 +1,36 @@
+$grey_color: #636363;
+$grey_backg: #F7F7F7;
+$grey_element_backg: rgb(194, 194, 194);
+
+.trainList {
+text-align: start;
+width: 35%;
+background-color: white;
+padding: 1%;
+}
+.trains{
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.train{
+  cursor: pointer;
+  border-bottom: 1px $grey_element_backg solid;
+  height: 30px;
+}
+
+.train:hover{
+background-color: $grey_element_backg;
+}
+
+th{
+  color: $grey_color;
+  background-color: $grey_backg ;
+  text-align: start;
+}
+
+h4{
+  margin-bottom: 5px;
+}
