@@ -11,14 +11,12 @@ export const Train: React.FC = () => {
   const trainsDescription = useAppSelector((state) => state.trainChanger);
   const trainName = useAppSelector((state) => state.trainNumber.number);
   const isValid = useAppSelector((state) => state.valid.isValid);
-  console.log("train");
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     Sorting(trainsDescription);
   };
 
-  console.log("train");
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.train_Data}>
