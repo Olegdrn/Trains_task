@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { useAppDispatch } from "../../hooks/redux";
 import { Validation } from "../../lib/validation";
 import { validChange } from "../../features/validData";
@@ -6,7 +6,7 @@ import styles from "./InputParam.module.scss";
 import { trainDataUpdated } from "../../features/trainData";
 import { newInputData } from "../../../types";
 
-export const InputParam: React.FC<newInputData> = (props) => {
+export const InputParam: React.FC<newInputData> = memo((props) => {
   const dispatch = useAppDispatch();
   const [error, setError] = useState<boolean>(false);
 
@@ -44,4 +44,4 @@ export const InputParam: React.FC<newInputData> = (props) => {
       </div>
     </>
   );
-};
+});
