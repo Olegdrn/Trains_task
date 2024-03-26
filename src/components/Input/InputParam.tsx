@@ -37,9 +37,9 @@ export const InputParam: React.FC<newInputData> = (props) => {
           name={props.characteristic}
           id={`${props.id}`}
           type="string"
-          // value={props.value}
-          defaultValue={props.value}
-          onBlur={(e) => onParamChange(e)}
+          value={props.value}
+          // defaultValue={props.value}
+          onChange={(e) => onParamChange(e)}
         />
       </div>
     </>
