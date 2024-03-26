@@ -10,13 +10,6 @@ export const store = configureStore({
     valid: isValidReducer,
   },
 
-  // middleware: (getDefaultMiddleware) =>
-  //   getDefaultMiddleware({
-  //     serializableCheck: {
-  //       ignoredActions: ["currentDate/dateChanging"],
-  //       ignoredPaths: ["dateChanger.currentDate"],
-  //     },
-  //   }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
