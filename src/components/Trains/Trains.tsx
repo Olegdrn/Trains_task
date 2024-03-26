@@ -1,17 +1,12 @@
 import { UseAxios } from "../../hooks/useAxios";
 import styles from "./Trains.module.scss";
-import { Trains as TrainsType } from "../../../types";
+import { TrainData, Trains as TrainsType } from "../../../types";
 import { nanoid } from "nanoid";
 import { useNavigate } from "react-router-dom";
 import { trainDataAdded, trainDataDeleted } from "../../features/trainData";
 import { trainNumberChanged } from "../../features/trainNumber";
 import { useAppDispatch } from "../../hooks/redux";
-
-interface TrainData {
-  speed: number;
-  force: number;
-  engineAmperage: number;
-}
+import { validChange } from "../../features/validData";
 
 export const Trains: React.FC = () => {
   const idUrl = useNavigate();
@@ -29,9 +24,9 @@ export const Trains: React.FC = () => {
   const handleRowClick = (row: string, characteristics: TrainData[]) => {
     idUrl(`/${row}`);
     dispatch(trainDataDeleted());
-    characteristics.forEach((e: TrainData, i: number) => {
-      dispatch(trainDataAdded(e));
-    });
+    dispatch(trainNumberChanged(row));
+    dispatch(trainDataAdded(characteristics));
+    dispatch(validChange(true));
   };
 
   return (
@@ -51,7 +46,6 @@ export const Trains: React.FC = () => {
                 key={nanoid()}
                 onClick={() => {
                   handleRowClick(train.name, train.characteristics);
-                  dispatch(trainNumberChanged(train.name));
                 }}
                 className={styles.train}
               >

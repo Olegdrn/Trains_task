@@ -9,3 +9,9 @@ export interface Trains {
   description: string;
   name: string;
 }
+
+export interface newInputData {
+  id: number;
+  characteristic: string;
+  value: number;
+}

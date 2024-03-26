@@ -24,10 +24,17 @@ h4{
 .characteristic{
   border-bottom: 1px $grey_element_backg solid;
 }
+.error{
+background-color: red;
+}
 
 input{
   width: 50%;
   border: none;
   padding: 3px 5px ;
   text-align: center;
+}
+button{
+  align-self: center;
+  width: 70%;
 }
