@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Запуск проекта командами ниже
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
